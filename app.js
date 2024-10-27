@@ -12,18 +12,18 @@ clearCanvas.addEventListener("click", () =>{
 });
 
 // Variables to track if the user is drawing
-let isDrawing = false;
+let draw = false;
 
-// Start drawing when the mouse is pressed down
+// Start isDrawing when the mouse is pressed down
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
 });
 
-// Draw as the mouse moves (only if drawing is true)
+// Draw as the mouse moves (only if isDrawing is true)
 canvas.addEventListener('mousemove', (e) => {
-    if (!drawing) return; // Stop if the mouse is not pressed
-// Example: Draw a small dot at the current mouse position
-    if(circle.checked){
+    if (!isDrawing){
+        return; // Stop if the mouse is not pressed
+    } else if(circle.checked){
         ctx.beginPath();
         ctx.arc(e.offsetX, e.offsetY, 10, 0, Math.PI * 2);
         ctx.fillStyle = color.value;
@@ -44,7 +44,7 @@ canvas.addEventListener('mousemove', (e) => {
     }
 });
 
-// Stop drawing when the mouse is released
+// Stop isDrawing when the mouse is released
 canvas.addEventListener('mouseup', () => {
-    drawing = false;
+    isDrawing = false;
 });
