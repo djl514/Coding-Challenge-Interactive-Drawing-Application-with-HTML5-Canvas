@@ -2,20 +2,18 @@ const canvas = document.getElementById('canva');
 const ctx = canvas.getContext('2d');
 const clearCanvas = document.getElementById('clear');
 const color = document.getElementById('colorPicker');
+const rectangle = document.getElementById('rect');
+const circle = document.getElementById('circle');
+const line = document.getElementById('line');
+
 
 let width = canvas.width;
 let height = canvas.height;
 
+//Clears the canvas
 clearCanvas.addEventListener("click", () =>{
     ctx.clearRect(0,0, width, height);
 });
-//clears canvas
-
-let opacity = 1;
-document.querySelector("#opacity").addEventListener("change", e=> {
-    opacity = e.target.value;
-});
-//changes the opacity of the drawing
 
 let isDrawing = false;
 

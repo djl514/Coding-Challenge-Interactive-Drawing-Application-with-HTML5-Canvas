@@ -12,24 +12,18 @@
 
 
     <center><canvas id = "canva" width = "600" height = "600"></canvas></center>
-        <center><button id = "clear">Clear Canvas</button></center>
-        <br>
-        <input type="range" id="opacity" min="0" max="1" value="1" step="0.1">
-        <label for="opacity">Opacity</label>
+        <center><button id = "clear">Clear Canvas</button>
         <br>
         <input type="color" id="colorPicker" value="#000000">
         <label for="colorPicker">Choose Color</label>
         
         <br>
         <label>
-            <input type="radio" name="brushSize" value="small" checked> Small
-            </label>
+            <input id="rect" type="radio" name="brushSize" value="rectangle" checked>Rectangle</label>
             <label>
-            <input type="radio" name="brushSize" value="medium"> Medium
-            </label>
+            <input id="circle" type="radio" name="brushSize" value="circle">Circle</label>
             <label>
-            <input type="radio" name="brushSize" value="large"> Large
-        </label>
+            <input id="line" type="radio" name="brushSize" value="line">Line</label></center>
 
 
     <script src="app.js"></script>
