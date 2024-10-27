@@ -11,39 +11,12 @@ clearCanvas.addEventListener("click", () =>{
     ctx.clearRect(0,0, canvas.width, canvas.height);
 });
 
-// let isDrawing = false;
-// // Start drawing
-// canvas.addEventListener('mousedown', () => {
-// isDrawing = true;
-// });
-
-// // Stop drawing
-// canvas.addEventListener('mouseup', () => {
-// isDrawing = false;
-// ctx.beginPath();
-// });
-
-// // Draw as the mouse moves
-// canvas.addEventListener('mousemove', (event) => {
-// if (!isDrawing) return;
-
-// ctx.lineWidth = 5;
-// ctx.lineCap = 'round';
-// ctx.strokeStyle = color.value; // Default color, you can change this dynamically
-
-// ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-// ctx.stroke();
-// ctx.beginPath();
-// ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-// });
-
-
 // Variables to track if the user is drawing
-let drawing = false;
+let isDrawing = false;
 
 // Start drawing when the mouse is pressed down
 canvas.addEventListener('mousedown', (e) => {
-    drawing = true;
+    isDrawing = true;
 });
 
 // Draw as the mouse moves (only if drawing is true)
