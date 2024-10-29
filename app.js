@@ -12,7 +12,7 @@ clearCanvas.addEventListener("click", () =>{
 });
 
 // Variables to track if the user is drawing
-let draw = false;
+let isDrawing = false;
 
 // Start isDrawing when the mouse is pressed down
 canvas.addEventListener('mousedown', (e) => {
